@@ -265,28 +265,13 @@ a {
   padding-top: 0.1rem;
   font-size: 2.5rem;
 }
-.search input {
-  border: 1px solid #ced4da;
-  padding: 6px 12px;
-  width: 22rem;
-  height: 2.3rem;
-  margin-top: 8px;
-  margin-right: 150px;
-}
 
 ::placeholder {
   color: darkgrey;
   font-weight: 200;
   font-size: 15px;
 }
-.icon-serach {
-  position: relative;
-  border: 1px solid #ced4da;
-  padding: 9px;
-  left: -190px;
-  top: 1px;
-  color: #ffd333;
-}
+
 .connect :first-child {
   color: #6c757d;
   font-weight: 16px;
@@ -299,7 +284,51 @@ a {
   color: #3d464d;
   font-size: 22px;
 }
+.search-bar {
+  text-align: center;
+}
+.search-form input,
+.search-form button,
+.search-form-flex input,
+.search-form-flex button {
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 0;
+  outline: none;
+  border: 1px solid #ced4da;
+  background: transparent;
+}
 
+.search-form input:focus,
+.search-form-flex input:focus {
+  border-color: #ffefb3;
+}
+
+.search-form button,
+.search-form-flex button {
+  background: transparent;
+  color: #ffd333 !important;
+  border-left: none;
+}
+
+.search-form input,
+.search-form button {
+  display: block;
+  float: left;
+}
+.search-form::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.search-form input,
+.search-form-flex input {
+  width: 400px;
+  max-width: 100%;
+}
+.search-form-flex {
+  display: flex;
+}
 .main {
   background-color: #3d464d;
   display: flex;
